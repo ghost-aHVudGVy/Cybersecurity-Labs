@@ -19,7 +19,7 @@ In this lab, I used the Social Engineering Toolkit (SET) in Kali Linux to clone 
 - **Operating System:** Kali Linux (virtual machine)
 - **Tool:** Social Engineering Toolkit (SET)
 - **Browser:** Firefox (to test the cloned site)
-- **Target Site for Cloning:** `https://www.instagram.com`
+- **Target Site for Cloning:** `https://www.facebook.com/`
 
 ---
 
@@ -48,13 +48,13 @@ In this lab, I used the Social Engineering Toolkit (SET) in Kali Linux to clone 
 
 - SET prompted for a method — selected: ***Option 2: Site Cloning***
 - Entered my local IP address (found using ifconfig).
-- When prompted, entered the target URL: [https://www.instagram.com](https://www.instagram.com/)
+- When prompted, entered the target URL: https://www.facebook.com/
 - SET cloned the site and prepared it for credential capture.
 
 ### 🔹 Task 5: Accessing the Cloned Site
 
 - Opened Firefox in Kali and navigated to: `http://my-local-ip`
-- Viewed the cloned Instagram login page.
+- Viewed the cloned Facebook login page.
 - Entered a test username and password.
 
 ### 🔹 Task 6: Capturing Credentials
