@@ -19,7 +19,7 @@ The goal of this repository is to:
 | [Lab 03 - WHOIS_&_Subdomain_Recon_with_Recon-ng](./03.WHOIS_&_Subdomain_Recon_with_Recon-ng)| Learned how to use Recon-ng to gather WHOIS data and subdomains|
 
 
-## What You'll Find in Each Lab
+### What You'll Find in Each Lab
 Each lab folder contains:
 
 - `README.md`: Walkthrough of the lab with objectives, methodology, tools, findings, and what I learned.
