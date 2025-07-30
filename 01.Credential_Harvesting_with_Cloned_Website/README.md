@@ -77,9 +77,11 @@ In this lab, I used the Social Engineering Toolkit (SET) in Kali Linux to clone 
 Screenshots are saved in the screenshots/ folder:
 
 - set_tool_launch.png
-- site_cloning_prompt.png
-- cloned_instagram_page.png
-- captured_credentials_output.png
+- website_attack_vectors.png
+- credential_harvester.png
+- site_cloner.png
+- seting_up_the_cloned_site.png
+- captured_results.png
 
 ## Challenges Faced / Troubleshooting
 
