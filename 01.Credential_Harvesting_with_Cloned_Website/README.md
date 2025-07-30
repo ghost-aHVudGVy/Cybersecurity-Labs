@@ -76,12 +76,12 @@ In this lab, I used the Social Engineering Toolkit (SET) in Kali Linux to clone 
 
 Screenshots are saved in the screenshots/ folder:
 
-- set_tool_launch.png
-- website_attack_vectors.png
-- credential_harvester.png
-- site_cloner.png
-- seting_up_the_cloned_site.png
-- captured_results.png
+- [set_tool_launch.png](./01.Credential_Harvesting_with_Cloned_Website/Screenshots/set_tool_launch.png)
+- [website_attack_vectors.png](./01.Credential_Harvesting_with_Cloned_Website/Screenshots/website_attack_vectors.png)
+- [credential_harvester.png](./01.Credential_Harvesting_with_Cloned_Website/Screenshots/credential_harvester.png)
+- [site_cloner.png](./01.Credential_Harvesting_with_Cloned_Website/Screenshots/site_cloner.png)
+- [seting_up_the_cloned_site.png](./01.Credential_Harvesting_with_Cloned_Website/Screenshots/seting_up_the_cloned_site.png)
+- [captured_results.png](./01.Credential_Harvesting_with_Cloned_Website/Screenshots/captured_results.png)
 
 ## Challenges Faced / Troubleshooting
 
