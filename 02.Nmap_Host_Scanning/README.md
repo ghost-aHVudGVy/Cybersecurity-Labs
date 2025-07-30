@@ -1,7 +1,7 @@
 # Nmap Host Scanning Lab
 
 ## Description:  
-In this lab, I used Nmap to scan a remote host and learn how to identify open ports, running services, and operating system details. Nmap is a powerful tool used by both system administrators and attackers to gather information about networked devices.
+In this lab, I used Nmap to scan a remote host and learn how to identify open ports, running services, and operating system details.
 
 ---
 
@@ -25,8 +25,7 @@ In this lab, I used Nmap to scan a remote host and learn how to identify open po
 
 ### 🔹 Task 1: Basic Scan
 - Opened the terminal in Kali and ran:
-  
-bash
+  ```bash
   nmap scanme.nmap.org
 This scanned the top 1000 ports and showed 4 open ports with basic service info.
 
@@ -35,7 +34,7 @@ Tried running: `nmap -v -sT -sV -O scanme.nmap.org`
 but was prompted for root access.
 
 - Re-ran using sudo:
-bash
+  ```bash
   sudo nmap -v -sT -sV -O scanme.nmap.org
 
 ***This scan revealed:*** 
@@ -43,7 +42,7 @@ bash
 - Operating system details of the target host
 
 ### 🔹 Task 3: Exploring Other Scan Flags
-Tried other scan options like: sudo nmap -A scanme.nmap.org and more
+Tried other scan options like: `sudo nmap -A scanme.nmap.org` and more
 
 ---
 
@@ -51,14 +50,13 @@ Tried other scan options like: sudo nmap -A scanme.nmap.org and more
 - Nmap is an essential tool for network reconnaissance.
 - Even a simple scan reveals useful information like open ports and services.
 - Advanced scans require root access but give deeper insights, including service versions and OS guesses.
-- The ***-A*** flag combines multiple scan techniques and gives a full picture of the target.
+- The ***-A*** flag combines multiple scan techniques and gives a more detailed picture of the target.
 
 ## Screenshots
 Screenshots are saved in the screenshots/ folder:
 
-- basic_scan_result.png
-- advanced_scan_with_sudo.png
-- scan_with_a_flag.png
+- basic_scan.png
+- aggressive_scan.png
 
 ## Challenges Faced / Troubleshooting
 - Root Access Needed: Couldn’t perform advanced scans without sudo. Fixed by rerunning the command with sudo.
