@@ -15,7 +15,6 @@ Each lab folder contains:
 - `README.md`: Walkthrough of the lab with objectives, methodology, tools, findings, and what I learned.
 - `screenshots/`: Visual evidence of key stages and successful exploitation.
 - `scripts/` *(if applicable)*: Custom or adapted scripts used during the lab.
-- `notes.txt`: Personal notes, references, or follow-up ideas.
 ---
 
 
