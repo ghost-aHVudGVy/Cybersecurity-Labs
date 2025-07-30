@@ -23,8 +23,8 @@ Each lab folder contains:
 
 |                                   Lab Name                                      |                           Description                            |
 |---------------------------------------------------------------------------------|------------------------------------------------------------------|
-| [Lab 01 - Harvest_credentials_using_a_cloned_site](./01.Credential-harvesting) | Learn how to harvest credentials using a cloned phishing site.   |
-| [Lab 02 - Nmap_Host_Scanning_Lab](./02.Nmap-Host-Scanning-Lab) |  I learned how to extract useful information about a target system. |
+| [Lab 01 - Harvest_credentials_using_a_cloned_site](./01.Credential_Harvesting_with_Cloned_Website) | Learn how to harvest credentials using a cloned phishing site.   |
+| [Lab 02 - Nmap_Host_Scanning_Lab](./02.Nmap-Host-Scanning) |  I learned how to extract useful information about a target system. |
 
 
 ## Still in Progress...
