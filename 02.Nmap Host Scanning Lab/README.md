@@ -1,9 +1,6 @@
 # Nmap Host Scanning Lab
 
-## Lab Title & Description
-
-**Title:** Getting Started with Nmap Scanning  
-**Description:**  
+## Description:  
 In this lab, I used Nmap to scan a remote host and learn how to identify open ports, running services, and operating system details. Nmap is a powerful tool used by both system administrators and attackers to gather information about networked devices.
 
 ---
@@ -32,59 +29,41 @@ In this lab, I used Nmap to scan a remote host and learn how to identify open po
   nmap scanme.nmap.org
 This scanned the top 1000 ports and showed 4 open ports with basic service info.
 
-🔹 Task 2: Advanced Scan with Root Access
-Tried running:
-
-bash
-Copy
-Edit
-nmap -v -sT -sV -O scanme.nmap.org
+### 🔹 Task 2: Advanced Scan with Root Access
+Tried running: `nmap -v -sT -sV -O scanme.nmap.org`
 but was prompted for root access.
 
-Re-ran using sudo:
+- Re-ran using sudo:
+  ```bash
+  sudo nmap -v -sT -sV -O scanme.nmap.org
 
-bash
-Copy
-Edit
-sudo nmap -v -sT -sV -O scanme.nmap.org
-This scan revealed:
+***This scan revealed:*** 
+- Versions of services running on each open port
+- Operating system details of the target host
 
-Versions of services running on each open port
+### 🔹 Task 3: Exploring Other Scan Flags
+Tried other scan options like: `sudo nmap -A scanme.nmap.org` and more
 
-Operating system details of the target host
+---
 
-🔹 Task 3: Exploring Other Scan Flags
-Tried other scan options like:
+## Key Learnings / Observations
+- Nmap is an essential tool for network reconnaissance.
+- Even a simple scan reveals useful information like open ports and services.
+- Advanced scans require root access but give deeper insights, including service versions and OS guesses.
+- The ***-A*** flag combines multiple scan techniques and gives a full picture of the target.
 
-bash
-Copy
-Edit
-sudo nmap -A scanme.nmap.org
-Referred to official Nmap documentation for more scanning techniques:
-https://nmap.org/book/port-scanning-options.html
-
-Key Learnings / Observations
-Nmap is an essential tool for network reconnaissance.
-
-Even a simple scan reveals useful information like open ports and services.
-
-Advanced scans require root access but give deeper insights, including service versions and OS guesses.
-
-The -A flag combines multiple scan techniques and gives a full picture of the target.
-
-Screenshots
+## Screenshots
 Screenshots are saved in the screenshots/ folder:
 
-basic_scan_result.png
+- basic_scan_result.png
+- advanced_scan_with_sudo.png
+- scan_with_a_flag.png
 
-advanced_scan_with_sudo.png
+## Challenges Faced / Troubleshooting
+- Root Access Needed: Couldn’t perform advanced scans without sudo. Fixed by rerunning the command with sudo.
+- Firewall Consideration: Some scan results may vary if a firewall is present. In this case, the target was intentionally left open for scanning.
 
-scan_with_a_flag.png
+---
 
-Challenges Faced / Troubleshooting
-Root Access Needed: Couldn’t perform advanced scans without sudo. Fixed by rerunning the command with sudo.
-
-Firewall Consideration: Some scan results may vary if a firewall is present. In this case, the target was intentionally left open for scanning.
-
-Conclusion
-This lab gave me hands-on experience using Nmap for both basic and advanced host scanning. I learned how to extract useful information about a target system, which is a core skill for roles like Help Desk and SOC Analyst. It also helped me better understand how attackers gather intelligence, which is key for defending systems effectively.
+## Conclusion
+This lab gave me hands-on experience using Nmap for both basic and advanced host scanning. I learned how to extract useful information about a target system. It also helped me better understand how attackers gather intelligence, which is key for defending systems effectively.
