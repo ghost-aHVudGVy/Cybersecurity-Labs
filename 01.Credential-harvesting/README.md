@@ -1,83 +1,74 @@
-# Lab: Credential Harvesting via Cloned Website
+# Credential Harvesting with Cloned Website
 
-## Objective
-
-Harvest user credentials using a cloned version of a legitimate website hosted locally.
-
-## Purpose
-
-Demonstrate how attackers use cloned websites to conduct phishing and capture sensitive user input, such as usernames and passwords, without the target's awareness.
-
-## Tools & Environment
-
-- **Operating System**: Kali Linux (Virtual Machine)
-- **Tool**: Social Engineering Toolkit (SET)
-- **Browser**: Firefox
-- **Target Site (for cloning)**: https://www.instagram.com *(used for educational purposes only)*
-
-## Lab Topology
-
-                    Attacker (Kali Linux VM)
-                                |
-                         [Cloned Website]
-                                |
-                 Victim (Web Browser accessing local IP)
+## Description:  
+In this lab, I used the Social Engineering Toolkit (SET) in Kali Linux to clone a real website and simulate a credential harvesting attack. This technique is often used by attackers to trick users into entering their login details into a fake but convincing version of a legitimate site.
 
 ---
 
-## Walkthrough
+## Objective
 
-**Step 1: Launch SET**
+- Learn how to clone a website using SET
+- Understand how credential harvesting works in real-world attacks
+- Capture submitted credentials through a cloned login form
 
-* sudo setoolkit
+---
 
-* Select 2) Website Attack Vectors
+## Environment & Tools Used
 
-- Select 3) Credential Harvester Attack Method
+- **Operating System:** Kali Linux (virtual machine)
+- **Tool:** Social Engineering Toolkit (SET)
+- **Browser:** Firefox (to test the cloned site)
+- **Target Site for Cloning:** `https://www.instagram.com`
 
-**Step 2: Clone a Website**
-- Choose 2) Site Cloner
+---
 
-- Enter your local IP address (found using ifconfig)
+## Steps Taken / Summary of Execution
 
-- Enter the URL to clone: https://www.instagram.com/
+### 🔹 Task 1: Launching SET
+- Booted up Kali Linux VM.
+- Opened terminal and started SET:
+  ```bash
+  sudo setoolkit
+### 🔹 Task 2: Selecting Attack Vector
+- From the main SET menu, chose: ***Option 2: Website Attack Vectors***
 
-**Step 3: Access the Cloned Site**
-- Open Firefox on Kali Linux
+### 🔹 Task 3: Choosing Attack Method
+- From the next menu, selected: ***Option 3: Credential Harvester Attack Method***
 
-- Visit your IP address in the browser (e.g. http://192.168.1.10)
+### 🔹 Task 4: Cloning a Website
+- SET prompted for a method — selected: ***Option 2: Site Cloning***
+- Entered my local IP address (found using ifconfig).
+- When prompted, entered the target URL: https://www.instagram.com
+- SET cloned the site and prepared it for credential capture.
 
-- The cloned Instagram login page should appear
+### 🔹 Task 5: Accessing the Cloned Site
+- Opened Firefox in Kali and navigated to: `http://my-local-ip`
+- Viewed the cloned Instagram login page.
+- Entered a test username and password.
 
-- Enter fake credentials (e.g. testuser / testpass)
+### 🔹 Task 6: Capturing Credentials
+- Returned to the terminal where SET was running.
+- Observed captured POST data.
+- Found submitted username and password in cleartext.
 
-**Step 4: View Captured Credentials**
-- Go back to the terminal where SET is running
+---
 
-- Look for the POST data showing captured credentials:
-
-username=testuser
-password=testpass
+## Key Learnings / Observations
+- Credential harvesting via cloned sites is surprisingly easy with the right tools.
+- Users can be easily fooled by realistic-looking clones.
+- This technique highlights the importance of phishing awareness and secure browsing practices.
+- Tools like SET make it simple to simulate real-world social engineering attacks for learning purposes.
 
 ## Screenshots
-[Screenshots](https://github.com/ghost-aHVudGVy/Cybersecurity-Labs/blob/main/01.Credential-harvesting/Screenshots)
+Screenshots are saved in the screenshots/ folder:
+- set_tool_launch.png
+- site_cloning_prompt.png
+- cloned_instagram_page.png
+- captured_credentials_output.png
 
-## What I Learned
-- How phishing attacks can be carried out using cloned websites
+## Challenges Faced / Troubleshooting
+- IP Address Confusion: Initially entered the wrong IP address. Fixed by double-checking with ifconfig.
+---
 
-- The role of Social Engineering Toolkit (SET) in simulating real-world attacks
-
-- The importance of verifying URLs and HTTPS certificates
-
-- Why user awareness is key in preventing social engineering attacks
-
-## Disclaimer
-This lab was conducted in a secure, isolated environment for educational purposes only. Never attempt these techniques on unauthorized systems or networks.
-
-## Files Included
-
-| File/Folder    | Description                     |
-| -------------- | ------------------------------- |
-| `README.md`    | Lab documentation               |
-| `screenshots/` | Visual references for key steps |
-| `notes.txt`    | Notes and observations |
+## Conclusion
+This lab gave me hands-on experience with credential harvesting techniques using a cloned site. I learned how attackers can manipulate users through phishing and social engineering, and how easy it is to simulate such attacks in a controlled environment.
