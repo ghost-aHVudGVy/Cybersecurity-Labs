@@ -8,15 +8,7 @@ The goal of this repository is to:
 - Develop and refine practical cybersecurity skills
 - Document my learning journey
 - Showcase my capabilities to future employers, collaborators, and the security community
-
-## What You'll Find in Each Lab
-Each lab folder contains:
-
-- `README.md`: Walkthrough of the lab with objectives, methodology, tools, findings, and what I learned.
-- `screenshots/`: Visual evidence of key stages and successful exploitation.
-- `scripts/` *(if applicable)*: Custom or adapted scripts used during the lab.
 ---
-
 
 ## Sample Labs (More Coming Soon)
 
@@ -26,6 +18,15 @@ Each lab folder contains:
 | [Lab 02 - Nmap_Host_Scanning_Lab](./02.Nmap_Host_Scanning) |  Learned how to extract useful information about a target system. |
 | [Lab 03 - WHOIS_&_Subdomain_Recon_with_Recon-ng](./03.WHOIS_&_Subdomain_Recon_with_Recon-ng)| Learned how to use Recon-ng to gather WHOIS data and subdomains|
 
+
+## What You'll Find in Each Lab
+Each lab folder contains:
+
+- `README.md`: Walkthrough of the lab with objectives, methodology, tools, findings, and what I learned.
+- `screenshots/`: Visual evidence of key stages and successful exploitation.
+- `scripts/` *(if applicable)*: Custom or adapted scripts used during the lab.
+
+---
 
 ## Still in Progress...
 This repository is a **living project** — more labs are added weekly as I continue exploring new tools, vulnerabilities, and techniques.
