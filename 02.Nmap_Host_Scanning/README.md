@@ -55,8 +55,8 @@ Tried other scan options like: `sudo nmap -A scanme.nmap.org` and more
 ## Screenshots
 Screenshots are saved in the screenshots/ folder:
 
-- basic_scan.png
-- aggressive_scan.png
+- [basic_scan.png](./Screenshots/01.basic_scan.png)
+- [aggressive_scan.png](./Screenshots/02.aggressive_scan.png)
 
 ## Challenges Faced / Troubleshooting
 - Root Access Needed: Couldn’t perform advanced scans without sudo. Fixed by rerunning the command with sudo.
