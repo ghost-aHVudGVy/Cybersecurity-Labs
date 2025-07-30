@@ -35,5 +35,5 @@ Stay tuned!
 
 ---
 
-> 💬 If you have feedback, suggestions, or want to collaborate, feel free to open an issue or reach out.
+> If you have feedback, suggestions, or want to collaborate, feel free to open an issue or reach out.
 
