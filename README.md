@@ -2,14 +2,14 @@
 A collection of hands-on cybersecurity labs documenting practical experience in ethical hacking, vulnerability assessment, exploitation, and post-exploitation.
 Each lab is fully documented and includes tools used, step-by-step methodology, screenshots, key findings, and personal takeaways.
 
-## 📌 Purpose
+## Purpose
 The goal of this repository is to:
 
 - Develop and refine practical cybersecurity skills
 - Document my learning journey
 - Showcase my capabilities to future employers, collaborators, and the security community
 
-## 🧠 What You'll Find in Each Lab
+## What You'll Find in Each Lab
 Each lab folder contains:
 
 - `README.md`: Walkthrough of the lab with objectives, methodology, tools, findings, and what I learned.
@@ -19,14 +19,15 @@ Each lab folder contains:
 ---
 
 
-## 🧭 Sample Labs (More Coming Soon)
+## Sample Labs (More Coming Soon)
 
 |                                   Lab Name                                      |                           Description                            |
 |---------------------------------------------------------------------------------|------------------------------------------------------------------|
-| [Lab 1 - Harvest credentials using a cloned site](./lab-1-Harvest-credentials)  | Learn how to harvest credentials using a cloned phishing site.   |
+| [Lab 01 - Harvest_credentials_using_a_cloned_site](./01.Credential-harvesting) | Learn how to harvest credentials using a cloned phishing site.   |
+| [Lab 02 - Nmap_Host_Scanning_Lab](./02.Nmap-Host-Scanning-Lab) |  I learned how to extract useful information about a target system. |
 
 
-## 🧩 Still in Progress...
+## Still in Progress...
 This repository is a **living project** — more labs are added weekly as I continue exploring new tools, vulnerabilities, and techniques.
 
 Stay tuned!
