@@ -1,6 +1,8 @@
 # Cybersecurity Labs  
 **Hands-on Blue Team & Ethical Hacking Practice**
 
+**Disclaimer:** All labs were performed in isolated, authorized test environments for learning purposes only.
+
 ---
 
 ## About This Repository  
