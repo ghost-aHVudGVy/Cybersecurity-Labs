@@ -1,10 +1,9 @@
 # WHOIS & Subdomain Recon (Recon-ng)
 
-**Description**  
-This lab demonstrates Open-Source Intelligence (OSINT) techniques using Recon-ng to collect WHOIS information and discover subdomains for a target domain. The goal is to understand how publicly available domain metadata and subdomain enumeration can reveal an organization’s digital footprint.
+**Disclaimer:** All recon was performed for educational purposes in a controlled lab environment and against publicly available information. Do not perform reconnaissance against systems you do not own or do not have explicit permission to test. Use public test targets or obtain written authorization before attempting any active probing.
 
-**Disclaimer & Ethics**  
-All recon was performed for educational purposes in a controlled lab environment and against publicly available information. Do **not** perform reconnaissance against systems you do not own or do not have explicit permission to test. Use public test targets or obtain written authorization before attempting any active probing.
+## Description  
+This lab demonstrates Open-Source Intelligence (OSINT) techniques using Recon-ng to collect WHOIS information and discover subdomains for a target domain. The goal is to understand how publicly available domain metadata and subdomain enumeration can reveal an organization’s digital footprint.
 
 ---
 
@@ -50,7 +49,7 @@ All recon was performed for educational purposes in a controlled lab environment
 
 ## Challenges & Notes
 - Public WHOIS data may be limited or privacy-protected (WHOIS privacy services can hide contact info).  
-- Different sources return different results; aggregation improves coverage.  
+- Different sources return different results. Aggregation improves coverage.  
 - Always verify discovered assets with owners where appropriate before any further action.
 
 ---
@@ -59,14 +58,3 @@ All recon was performed for educational purposes in a controlled lab environment
 - Recon-ng provides an efficient framework to automate OSINT collection and module chaining.  
 - Passive reconnaissance uncovers a domain’s external footprint and helps defenders prioritize monitoring and hardening efforts.  
 - Effective recon requires combining multiple data sources and validating findings to reduce false positives.
-
----
-
-## References & Further Reading
-- Recon-ng documentation: https://github.com/lanmaster53/recon-ng  
-- Certificate Transparency / crt.sh — for passive certificate-based subdomain discovery  
-- OWASP OSINT and Reconnaissance resources
-
----
-
-**Reviewer note:** For a quick assessment, review `03_whois_output_redacted.png` to see summarized WHOIS fields and `05_subdomain_list_redacted.png` for discovered subdomains and resolved IPs.
