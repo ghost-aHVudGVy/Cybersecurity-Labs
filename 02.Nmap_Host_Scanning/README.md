@@ -1,108 +1,69 @@
-# Nmap Host Scanning Lab
+# Lab: Nmap Host Scanning
 
-## Description:  
-In this lab, I used Nmap to scan a remote host and learn how to identify open ports, running services, and operating system details.
+**Description**  
+This lab demonstrates host discovery and service enumeration using Nmap. The aim is to learn how to perform basic and more advanced scans, interpret results, and understand what information an attacker or defender can extract from network scanning.
 
----
-
-## Objective
-
-- Understand how to run basic and advanced Nmap scans
-- Learn how to interpret scan results
-- Identify ports, services, and OS information from a target host
+**Disclaimer / Legal**  
+All scanning was performed against `scanme.nmap.org`, a public test target provided by the Nmap project for learning purposes. Do **not** scan systems you do not own or do not have explicit permission to test. Always use an isolated lab or authorized targets.
 
 ---
 
-## Environment & Tools Used
-
-- **Operating System:** Kali Linux (running in a virtual machine)
-- **Tool:** Nmap (pre-installed in Kali)
-- **Target Host:** scanme.nmap.org (safe practice site provided by Nmap)
-
----
-
-## Steps Taken / Summary of Execution
-
-### 🔹 Task 1: Basic Scan
-- Opened the terminal in Kali and ran:
-  ```bash
-  nmap scanme.nmap.org
-This scanned the top 1000 ports and showed 4 open ports with basic service info.
-
-### 🔹 Task 2: Advanced Scan with Root Access
-Tried running:
-    ```bash
-    sudo nmap -v -sT -sV -O scanme.nmap.org
-
-***This scan revealed:*** 
-1. **Open Ports (TCP):**
-    - **22 (SSH)** – Blocked/restricted (**`tcpwrapped`**).
-    - **80 (HTTP), 443 (HTTPS), 8080 (HTTP-alt)** – Web services running.
-2. **Closed/Filtered Ports:**
-    - **53 (DNS)** – Closed.
-    - **995 others** – Filtered (likely firewalled).
-3. **OS Detection:**
-    - Likely **VirtualBox/QEMU** (virtual machine).
-    - No exact OS match (limited scan conditions).
-4. **Key Insight:**
-    - **No service versions** detected (**`tcpwrapped`** suggests restricted access).
-
-### 🔹 Task 3: Exploring Other Scan Flags
-Tried other scan options like: `sudo nmap -A scanme.nmap.org`
-
-***This scan revealed more details:*** 
-1. **Open Ports & Services**:
-    - **22/tcp (SSH)**
-        - Exposed SSH host keys (DSA, RSA, ECDSA, ED25519).
-        - Indicates SSH is running but may be firewrapped (**`tcpwrapped`**).
-    - **80/tcp (HTTP)**
-        - **Web server**: Apache/2.4.7 (Ubuntu).
-        - **Title**: *"Go ahead and ScanMe!"* (confirms it’s Nmap’s test server).
-        - **Favicon**: Nmap Project logo.
-    - **443/tcp (HTTPS)** & **8080/tcp (HTTP-alt)**
-        - Open but no additional details (likely similar to port 80).
-2. **Closed/Filtered**:
-    - **53/tcp (DNS)** → Closed (no DNS service on TCP).
-    - **995 other ports** → Filtered (no response, likely firewalled).
-3. **OS & Network**:
-    - **Likely OS**: Virtualized (Oracle VirtualBox/QEMU).
-    - **Network Distance**: 1 hop (you’re close to the server, possibly same ISP).
-4. **Traceroute**:
-    - Direct connection (no intermediate hops).
-
-## **What’s New vs. Previous Scan?**
-
-- **SSH Host Keys** (useful for fingerprinting).
-- **HTTP Details** (server version, page title, favicon).
-- **Traceroute Confirmation** (no middlemen).
-
-## **Bottom Line:**
-
-This scan reveals:
-
-- A **Ubuntu Apache server** running on port 80 with a test page.
-- **SSH is available** (but may be restricted).
-- The host is likely a **virtual machine** (VirtualBox/QEMU).
+## Objectives
+- Learn basic and advanced Nmap scan types and options.  
+- Interpret open ports, running services, and OS/service fingerprinting results.  
+- Understand limitations of scanning (firewalls, tcpwrapped services, rate-limiting).
 
 ---
 
-## Key Learnings / Observations
-- Nmap is an essential tool for network reconnaissance.
-- Even a simple scan reveals useful information like open ports and services.
-- Advanced scans require root access but give deeper insights, including service versions and OS guesses.
-- The ***-A*** flag combines multiple scan techniques and gives a more detailed picture of the target.
-
-## Screenshots
-Screenshots are saved in the screenshots/ folder:
-
-- [basic_scan.png](./Screenshots/01.basic_scan.png)
-- [aggressive_scan.png](./Screenshots/02.aggressive_scan.png)
-
-## Challenges Faced / Troubleshooting
-- Root Access Needed: Couldn’t perform advanced scans without sudo. Fixed by rerunning the command with sudo.
-- Firewall Consideration: Some scan results may vary if a firewall is present. In this case, the target was intentionally left open for scanning.
+## Environment & Tools
+- Host OS: Kali Linux (virtual machine)  
+- Tool: Nmap (pre-installed in Kali)  
+- Target: `scanme.nmap.org` (public test host)  
+- Notes: Lab executed on an isolated VM network; no production systems were targeted.
 
 ---
 
-## Conclusion
-This lab gave me hands-on experience using Nmap for both basic and advanced host scanning. I learned how to extract useful information about a target system. It also helped me better understand how attackers gather intelligence, which is key for defending systems effectively.
+## High-level Summary of Actions
+- Performed a basic TCP scan to identify common open ports and services.  
+- Performed a more detailed scan (service/version detection and OS fingerprinting) to gather additional information where permitted by the target.  
+- Compared results across scan variants to observe differences and the effect of filtering/firewalls.
+[Screenshots](./Screenshots/)
+
+---
+
+## Key Findings
+- **Open ports identified (example):** 22/tcp (SSH), 80/tcp (HTTP), 443/tcp (HTTPS), 8080/tcp (HTTP-alt).  
+- **Service details:** Web server identified on port 80 (Apache) with a test page confirming the host purpose. Service version detection may be limited by protections such as `tcpwrapped`.  
+- **OS fingerprinting:** Results suggested a virtualized host (VirtualBox/QEMU); exact OS matching can be unreliable under some conditions.  
+- **Network traversal:** Traceroute-like output indicated a short network path (1 hop), consistent with a nearby test host.
+
+---
+
+## Defensive / Mitigation Notes (what defenders should do)
+- Treat all unexpected external scanning as suspicious. Correlate with other telemetry (IDS/IPS, firewall logs).  
+- Monitor for unusual or repetitive port probing and rate-limit or block offending IPs.  
+- Use service banner hardening and minimize information exposed in service responses.  
+- Employ network segmentation and firewall rules to limit public exposure of management services (SSH, RDP, etc.).  
+- Encourage multi-factor authentication (MFA) to mitigate credential theft if services are discovered.  
+- Log and alert on suspicious service/version changes or increased scanning activity.
+- 
+---
+
+## Challenges & Troubleshooting
+- **Root permissions required for some advanced options:** resolved by using elevated privileges in the lab VM.  
+- **Firewall/IpTables effects:** some ports showed as filtered; results can vary based on network path and filtering.
+
+---
+
+## What I learned / Takeaways
+- Nmap is a powerful reconnaissance tool: even basic scans reveal useful info for both attackers and defenders.  
+- Advanced flags (service/version and OS detection) provide more detail but may be limited by protections or network factors.  
+- Defensive teams should monitor for scanning activity and harden publicly accessible services.
+
+---
+
+## References & Further Reading
+- Nmap documentation: https://nmap.org/book/  
+- Nmap project (scanme info): https://nmap.org/scanme/  
+- OWASP testing and defensive resources
+
