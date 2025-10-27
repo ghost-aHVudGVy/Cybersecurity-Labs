@@ -1,94 +1,52 @@
-# Credential Harvesting with Cloned Website
+# Credential Harvesting (Cloned Website)
 
-## Description:
+**Disclaimer:** This lab was performed in a controlled environment on my own virtual machines for educational purposes only. No real-world systems or third-party services were targeted. Do not attempt these techniques outside authorized lab environments.
 
-In this lab, I used the Social Engineering Toolkit (SET) in Kali Linux to clone a real website and simulate a credential harvesting attack. This technique is often used by attackers to trick users into entering their login details into a fake but convincing version of a legitimate site.
+## Description
+This exercise demonstrates how attackers can use cloned websites to harvest credentials (phishing). The goal of the lab is to understand the attack vector, observe how credentials are captured, and learn defensive measures and detection techniques.
 
----
+## Objectives
+- Understand the mechanics of credential-harvesting phishing pages.
+- Observe how submitted credentials are captured and stored.
+- Learn indicators of compromise and mitigation/detection strategies.
 
-## Objective
+## Environment & Tools
+- Kali Linux (VM)
+- Social-Engineering toolkit (lab instance)
+- Test browser (lab VM)
+- Isolated lab network (no internet exposure)
 
-- Learn how to clone a website using SET
-- Understand how credential harvesting works in real-world attacks
-- Capture submitted credentials through a cloned login form
+> Note: All activity was performed on isolated, non-production VMs.
 
----
+## High-level Summary of Actions
+- Deployed lab environment and launched a controlled phishing simulation.
+- Captured and inspected submitted test credentials within the lab environment.
+- Documented observable artefacts (HTTP requests, server logs) and where data was stored in the lab.
 
-## Environment & Tools Used
+[Screenshots](./Screenshots/)
 
-- **Operating System:** Kali Linux (virtual machine)
-- **Tool:** Social Engineering Toolkit (SET)
-- **Browser:** Firefox (to test the cloned site)
-- **Target Site for Cloning:** `https://www.facebook.com/`
+## Findings & Observations
+- Cloned pages can appear convincing. Minor visual cues or hosting differences can distinguish them from legitimate sites.
+- Captured credential submissions are typically visible in HTTP request bodies or server-side logs when not using HTTPS or when proxying traffic.
+- Lab demonstrated how social-engineering + technical setup enables credential capture, underscoring the human element in security.
 
----
+## Mitigations & Detection (what defenders should do)
+- User education and phishing awareness training (recognize suspicious URLs and email indicators).  
+- Enforce multi-factor authentication (MFA) on all important accounts to mitigate credential theft.  
+- Monitor web server and proxy logs for unusual POST requests or credential-like payloads.  
+- Use email and web filtering to block known phishing infrastructure and suspicious domains.  
+- Implement HSTS and certificate pinning where possible; educate users about padlock/HTTPS limitations.
 
-## Steps Taken / Summary of Execution
+## Challenges & Troubleshooting
+- Lab networking (local IP routing) required careful configuration — verify your isolated lab network before exercises.  
+- Ensure screenshots and logs are redacted before publishing.
 
-### 🔹 Task 1: Launching SET
+## What I learned
+- How credential-harvesting attacks function end-to-end in a lab setting.  
+- Practical signs of cloned pages and where defenders can look for evidence.  
+- Importance of defensive controls (MFA, monitoring, user training).
 
-- Booted up Kali Linux VM.
-- Opened terminal and started SET:
-    
-    ```bash
-    sudo setoolkit
-    
-    ```
-    
+## References & Further Reading
+- OWASP — Phishing and social engineering guidelines  
+- Defensive posts on log monitoring and email filtering
 
-### 🔹 Task 2: Selecting Attack Vector
-
-- From the main SET menu, chose: ***Option 2: Website Attack Vectors***
-
-### 🔹 Task 3: Choosing Attack Method
-
-- From the next menu, selected: ***Option 3: Credential Harvester Attack Method***
-
-### 🔹 Task 4: Cloning a Website
-
-- SET prompted for a method — selected: ***Option 2: Site Cloning***
-- Entered my local IP address (found using ifconfig).
-- When prompted, entered the target URL: https://www.facebook.com/
-- SET cloned the site and prepared it for credential capture.
-
-### 🔹 Task 5: Accessing the Cloned Site
-
-- Opened Firefox in Kali and navigated to: `http://my-local-ip`
-- Viewed the cloned Facebook login page.
-- Entered a test username and password.
-
-### 🔹 Task 6: Capturing Credentials
-
-- Returned to the terminal where SET was running.
-- Observed captured POST data.
-- Found submitted username and password in cleartext.
-
----
-
-## Key Learnings / Observations
-
-- Credential harvesting via cloned sites is surprisingly easy with the right tools.
-- Users can be easily fooled by realistic-looking clones.
-- This technique highlights the importance of phishing awareness and secure browsing practices.
-- Tools like SET make it simple to simulate real-world social engineering attacks for learning purposes.
-
-## Screenshots
-
-Screenshots are saved in the screenshots/ folder:
-
-- [set_tool_launch.png](./Screenshots/set_tool_launch.png)
-- [website_attack_vectors.png](./Screenshots/website_attack_vectors.png)
-- [credential_harvester.png](./Screenshots/credential_harvester.png)
-- [site_cloner.png](./Screenshots/site_cloner.png)
-- [seting_up_the_cloned_site.png](./Screenshots/seting_up_the_cloned_site.png)
-- [captured_results.png](./Screenshots/captured_results.png)
-
-## Challenges Faced / Troubleshooting
-
-- IP Address Confusion: Initially entered the wrong IP address. Fixed by double-checking with ifconfig.
-
----
-
-## Conclusion
-
-This lab gave me hands-on experience with credential harvesting techniques using a cloned site. I learned how attackers can manipulate users through phishing and social engineering, and how easy it is to simulate such attacks in a controlled environment.
