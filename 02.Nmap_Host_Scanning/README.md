@@ -1,6 +1,6 @@
 # Nmap Host Scanning
 
-**Disclaimer:** All scanning was performed against `scanme.nmap.org`, a public test target provided by the Nmap project for learning purposes. Do **not** scan systems you do not own or do not have explicit permission to test. Always use an isolated lab or authorized targets.
+**Disclaimer:** All scanning was performed against `scanme.nmap.org`, a public test target provided by the Nmap project for learning purposes. Do not scan systems you do not own or do not have explicit permission to test. Always use an isolated lab or authorized targets.
 
 ## Description  
 This lab demonstrates host discovery and service enumeration using Nmap. The aim is to learn how to perform basic and more advanced scans, interpret results, and understand what information an attacker or defender can extract from network scanning.
