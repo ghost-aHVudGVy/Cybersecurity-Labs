@@ -4,7 +4,8 @@
 ---
 
 ## About This Repository  
-This repository documents my hands-on cybersecurity labs, where I explore both **offensive and defensive security concepts** through real-world simulations.  
+This repository documents my hands-on cybersecurity labs, where I explore both **offensive and defensive security concepts** through real-world simulations.
+
 Each lab includes practical exercises in **ethical hacking, vulnerability assessment, threat detection, and incident response**, complete with screenshots, methodologies, and personal takeaways.
 
 The purpose of this project is to:
