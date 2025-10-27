@@ -1,4 +1,4 @@
-# Lab: Nmap Host Scanning
+# Nmap Host Scanning
 
 **Description**  
 This lab demonstrates host discovery and service enumeration using Nmap. The aim is to learn how to perform basic and more advanced scans, interpret results, and understand what information an attacker or defender can extract from network scanning.
