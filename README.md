@@ -1,78 +1,137 @@
-# Cybersecurity Labs  
-**Hands-on Blue Team & Ethical Hacking Practice**
+# Cybersecurity Portfolio
 
-**Disclaimer:** All labs were performed in isolated, authorized test environments for learning purposes only.
+## About Me
 
----
+I am an early-career cybersecurity practitioner focused on building strong fundamentals across application security, vulnerability management, cloud security, and incident response.
 
-## About This Repository  
-This repository documents my hands-on cybersecurity labs, where I explore both **offensive and defensive security concepts** through real-world simulations.
+This repository represents my commitment to hands-on learning, clear documentation, and ethical security practices.
 
-Each lab includes practical exercises in **ethical hacking, vulnerability assessment, threat detection, and incident response**, complete with screenshots, methodologies, and personal takeaways.
+## Overview
 
-The purpose of this project is to:
-- Strengthen my technical and analytical cybersecurity skills  
-- Document my learning journey in a professional, structured way  
-- Share my progress with potential employers and the security community  
+This repository contains a collection of hands-on cybersecurity labs conducted in controlled environments as part of my practical training and skills development.
 
----
+The goal of these labs is to demonstrate real-world security fundamentals across offensive and defensive domains, including reconnaissance, vulnerability assessment, application security, cloud security, incident response, and secure development practices.
 
-## Lab Highlights  
-
-| Lab | Description | Key Skills |
-|------|--------------|-------------|
-| **[Lab 01 – Harvest Credentials Using a Cloned Site](./01.Credential_Harvesting_with_Cloned_Website/README.md)** | Phishing simulation using a cloned login page to demonstrate credential harvesting in a controlled environment. | Social engineering awareness, web application analysis |
-| **[Lab 02 – Nmap Host Scanning](./02.Nmap_Host_Scanning/README.md)** | Network discovery and enumeration using Nmap to identify open ports and services. | Network mapping, service enumeration, reconnaissance |
-| **[Lab 03 – WHOIS & Subdomain Recon with Recon-ng](./03.WHOIS_&_Subdomain_Recon_with_Recon-ng/README.md)** | Gathering WHOIS data and subdomain information for a given domain using Recon-ng. | Passive reconnaissance, OSINT, domain profiling |
+All activities were performed ethically in isolated lab environments, personal virtual machines, or authorized public test targets, with a strong emphasis on documentation, risk awareness, and defensive takeaways.
 
 ---
 
-## Repository Structure
-```
-Cybersecurity-Labs/
-│
-├── 01.Credential_Harvesting_with_Cloned_Website/
-│   ├── README.md
-│   ├── screenshots/
-│
-├── 02.Nmap_Host_Scanning/
-│   ├── README.md
-│   ├── screenshots/
-│
-└── 03.WHOIS_&_Subdomain_Recon_with_Recon-ng/
-    ├── README.md
-    ├── screenshots/
-```
+## Labs Included
 
-Each lab contains:
-- **README.md** — Objectives, methodology, tools used, and key learnings  
-- **Screenshots/** — Step-by-step visuals of execution and results  
-- **Scripts/** *(if applicable)* — Custom or adapted code used during testing  
+### Credential Harvesting (Phishing Simulation)
+A controlled phishing simulation using a cloned website to demonstrate how credential harvesting attacks work and how defenders can detect and mitigate them.
+
+Focus areas:
+- Social engineering attack mechanics
+- Credential capture artifacts
+- Detection indicators
+- Defensive controls such as MFA and user awareness
 
 ---
 
-## Tools & Technologies  
-**Network Scanning:** Nmap, Netcat  
-**Web Recon:** Recon-ng, WHOIS, Sublist3r  
-**Exploitation & Analysis:** Metasploit, Burp Suite, OWASP ZAP  
-**Monitoring & Defense:** Splunk, Wireshark  
-**Operating Systems:** Kali Linux, Windows Server 2022  
+### Network Reconnaissance with Nmap
+Host discovery and service enumeration against an authorized public test target.
+
+Focus areas:
+- TCP scanning and service detection
+- OS and version fingerprinting
+- Interpreting scan results
+- Defensive visibility and mitigation strategies
 
 ---
 
-## Current Focus  
-I’m currently deepening my knowledge in:
-- SIEM operations and threat detection (Splunk, Wazuh)  
-- Vulnerability management and patch assessment  
-- Incident response documentation and escalation workflows  
+### WHOIS & Subdomain Reconnaissance (Recon-ng)
+Passive OSINT reconnaissance using public data sources to map a domain’s external footprint.
+
+Focus areas:
+- WHOIS metadata analysis
+- Subdomain discovery
+- Asset visibility and exposure
+- Defensive monitoring recommendations
 
 ---
 
-## Connect  
-- **LinkedIn:** [www.linkedin.com/in/antonio-karadenizov](www.linkedin.com/in/antonio-karadenizov)  
-- **GitHub Profile:** [github.com/ghost-aHVudGVy](https://github.com/ghost-aHVudGVy)
+### Vulnerability Assessment & Risk Prioritization (Nessus)
+A professional-style vulnerability assessment against Windows and Linux systems using Nessus Essentials.
+
+Focus areas:
+- Authenticated vs unauthenticated scanning
+- CVSS interpretation and limitations
+- False positive validation
+- Risk-based vulnerability prioritization
+- Remediation and verification planning
 
 ---
 
-> *This is an evolving project — new labs are added regularly as I continue exploring and building my cybersecurity skill set.*
+### Web Application Security Assessment (OWASP Juice Shop)
+Manual web application security testing against a deliberately vulnerable application.
+
+Focus areas:
+- OWASP Top 10 vulnerabilities
+- SQL injection and XSS validation
+- HTTP request analysis with Burp Suite
+- Impact assessment and remediation guidance
+
+---
+
+### Incident Response Lifecycle Simulation
+A simulated endpoint security incident following the NIST SP 800-61 incident response lifecycle.
+
+Focus areas:
+- Detection and triage
+- Containment and eradication
+- Recovery actions
+- Post-incident analysis and lessons learned
+
+---
+
+### AWS Cloud Security Fundamentals
+An entry-level cloud security implementation in AWS Free Tier.
+
+Focus areas:
+- Shared responsibility model
+- IAM users, roles, policies, and MFA
+- Network security with security groups
+- Logging and monitoring with CloudTrail
+- Common cloud misconfigurations
+
+---
+
+### Threat Modeling & Risk Assessment
+A consulting-style threat modeling exercise using the STRIDE methodology.
+
+Focus areas:
+- Asset identification
+- Threat and attack path analysis
+- Likelihood and impact assessment
+- Business risk explanation
+- Practical mitigations
+
+---
+
+### Secure Software Development Lifecycle (Secure SDLC)
+Integration of security into each phase of the SDLC for a small web application.
+
+Focus areas:
+- Security requirements and design review
+- Secure coding practices
+- Security testing in CI/CD
+- Developer collaboration and communication
+- DevSecOps mindset
+
+---
+
+## Structure
+
+Each lab is contained in its own directory and includes:
+- A detailed README documenting objectives, methodology, findings, and takeaways
+- Screenshots and evidence where applicable
+- Clear disclaimers and ethical boundaries
+
+---
+
+## Disclaimer
+
+All labs in this repository were conducted strictly for educational and portfolio purposes in controlled environments.  
+No production systems, customer data, or unauthorized targets were tested.
 
