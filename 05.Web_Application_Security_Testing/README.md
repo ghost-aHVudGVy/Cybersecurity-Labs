@@ -80,7 +80,9 @@ This caused the backend SQL query to evaluate as true, resulting in successful a
 
 ## Evidence
   [Intercepted login request in Burp](./screenshots/01_burp_intercept_login_request.png)
+  
   [Modified request with SQL injection payload](./screenshots/02_sql_injection_payload.png)
+  
   [Successful authentication bypass](./screenshots/03_sql_injection_successful_login.png)
 
 ---
@@ -119,6 +121,7 @@ The payload executed successfully, confirming a reflected XSS vulnerability.
 
 ## Evidence
   [XSS payload injected into the search bar](./screenshots/04_xss_payload_in_search_bar.png)
+  
   [JavaScript execution in browser](./screenshots/05_xss_alert_execution.png)
 
 ## Impact
