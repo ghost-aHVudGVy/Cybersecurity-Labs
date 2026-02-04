@@ -121,12 +121,10 @@ A JavaScript payload was injected into the search parameter:
 The payload executed successfully, confirming a reflected XSS vulnerability.
 
 ## Evidence
-- Intercepted search request in Burp
-  `screenshots/04_burp_intercept_search_request.png`
-- XSS payload injected into request
-  `screenshots/05_xss_payload_in_request.png`
+- XSS payload injected into the search bar
+  `screenshots/04_xss_payload_in_search_bar.png`
 - JavaScript execution in browser
-   `screenshots/06_xss_alert_execution.png`
+  `screenshots/05_xss_alert_execution.png`
 
 ## Impact
 - Session hijacking
