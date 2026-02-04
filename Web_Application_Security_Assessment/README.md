@@ -126,7 +126,7 @@ The payload executed successfully, confirming a reflected XSS vulnerability.
 - XSS payload injected into request
   `screenshots/05_xss_payload_in_request.png`
 - JavaScript execution in browser
-  `screenshots/06_xss_alert_execution.png`
+   `screenshots/06_xss_alert_execution.png`
 
 ## Impact
 - Session hijacking
