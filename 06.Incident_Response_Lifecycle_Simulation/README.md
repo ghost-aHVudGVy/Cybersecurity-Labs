@@ -172,8 +172,8 @@ This assessment was conducted strictly in a controlled lab environment using a s
 ---
 
 ## Repository Structure
-
-incident-response-lifecycle-simulation/
+```
+06.Incident_Response_Lifecycle_Simulation/
 ├── README.md
 └── screenshots/
     ├── 01_defender_threat_detection.png
@@ -181,5 +181,4 @@ incident-response-lifecycle-simulation/
     ├── 03_endpoint_isolation_network_disabled.png
     ├── 04_defender_threat_removal.png
     └── 05_system_restored_clean.png
-
-
+```
