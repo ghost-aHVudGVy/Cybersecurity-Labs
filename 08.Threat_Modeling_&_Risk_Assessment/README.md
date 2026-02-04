@@ -1,10 +1,6 @@
-Threat Modeling & Risk Assessment – Web Application Security Assessment
+# Threat Modeling & Risk Assessment
 
-Author: Antonio Karadenizov
-
----------------------------------------------------------------------
-
-Overview
+## Overview
 
 This project documents a structured threat modeling and risk assessment exercise conducted against a simple web application with user and administrator functionality.
 
@@ -14,7 +10,7 @@ The assessment follows a consulting-style approach using the STRIDE threat model
 
 ---------------------------------------------------------------------
 
-Threat Modeling Methodology
+## Threat Modeling Methodology
 
 The STRIDE methodology was used to systematically identify threats:
 
@@ -29,160 +25,160 @@ Each threat was evaluated based on likelihood and potential business impact.
 
 ---------------------------------------------------------------------
 
-Threat Identification & Risk Assessment
+## Threat Identification & Risk Assessment
 
 Threat 1: Spoofing – Credential Theft
 
-Description:
+### Description:
 Attackers may obtain user credentials through phishing or weak authentication mechanisms.
 
-Affected Assets:
+### Affected Assets:
 - User accounts
 - Administrator accounts
 - Sensitive data
 
-Likelihood:
+### Likelihood:
 Medium
 
-Impact:
+### Impact:
 High
 
-Business Risk:
+### Business Risk:
 Unauthorized access could lead to data breaches, compliance violations, and loss of customer trust.
 
-Mitigations:
+### Mitigations:
 - Enforce strong password policies
 - Implement multi-factor authentication (MFA)
 - Monitor failed login attempts
 
 ---------------------------------------------------------------------
 
-Threat 2: Tampering – Parameter Manipulation
+## Threat 2: Tampering – Parameter Manipulation
 
-Description:
+### Description:
 An attacker manipulates request parameters to modify data or bypass authorization controls.
 
-Affected Assets:
+### Affected Assets:
 - Application integrity
 - Database records
 
-Likelihood:
+### Likelihood:
 Medium
 
-Impact:
+### Impact:
 High
 
-Business Risk:
+### Business Risk:
 Unauthorized data modification could lead to fraud or data corruption.
 
-Mitigations:
+### Mitigations:
 - Server-side validation
 - Role-based access control enforcement
 - Use of secure coding practices
 
 ---------------------------------------------------------------------
 
-Threat 3: Repudiation – Lack of Logging
+## Threat 3: Repudiation – Lack of Logging
 
-Description:
+### Description:
 Insufficient logging allows users or attackers to deny performing malicious actions.
 
-Affected Assets:
+### Affected Assets:
 - Auditability
 - Incident investigation capability
 
-Likelihood:
+### Likelihood:
 Medium
 
-Impact:
+### Impact:
 Medium
 
-Business Risk:
+### Business Risk:
 Inability to investigate incidents may increase recovery time and regulatory exposure.
 
-Mitigations:
+### Mitigations:
 - Centralized logging
 - Secure log storage
 - Time synchronization
 
 ---------------------------------------------------------------------
 
-Threat 4: Information Disclosure – Sensitive Data Exposure
+## Threat 4: Information Disclosure – Sensitive Data Exposure
 
-Description:
+### Description:
 Sensitive information may be exposed through verbose error messages or insecure APIs.
 
-Affected Assets:
+### Affected Assets:
 - User data
 - Credentials
 - Internal system information
 
-Likelihood:
+### Likelihood:
 High
 
-Impact:
+### Impact:
 High
 
-Business Risk:
+### Business Risk:
 Data exposure can lead to regulatory penalties and reputational damage.
 
-Mitigations:
+### Mitigations:
 - Proper error handling
 - Encryption in transit and at rest
 - Least-privilege access controls
 
 ---------------------------------------------------------------------
 
-Threat 5: Denial of Service
+## Threat 5: Denial of Service
 
-Description:
+### Description:
 Attackers may overwhelm the application with excessive requests.
 
-Affected Assets:
+### Affected Assets:
 - Application availability
 
-Likelihood:
+### Likelihood:
 Low to Medium
 
-Impact:
+### Impact:
 High
 
-Business Risk:
+### Business Risk:
 Service outages affect customer trust and revenue.
 
-Mitigations:
+### Mitigations:
 - Rate limiting
 - Monitoring and alerting
 - Scalable infrastructure
 
 ---------------------------------------------------------------------
 
-Threat 6: Elevation of Privilege – Admin Access Abuse
+## Threat 6: Elevation of Privilege – Admin Access Abuse
 
-Description:
+### Description:
 A standard user escalates privileges to gain administrative access.
 
-Affected Assets:
+### Affected Assets:
 - Administrative functionality
 - Entire application
 
-Likelihood:
+### Likelihood:
 Low
 
-Impact:
+### Impact:
 Critical
 
-Business Risk:
+### Business Risk:
 Full compromise of the application and sensitive data.
 
-Mitigations:
+### Mitigations:
 - Strict role separation
 - Access reviews
 - Secure authorization checks
 
 ---------------------------------------------------------------------
 
-Risk Summary
+## Risk Summary
 
 The highest risks identified relate to:
 - Credential compromise
@@ -193,7 +189,7 @@ These threats represent significant business risk and should be prioritized for 
 
 ---------------------------------------------------------------------
 
-Key Takeaways
+## Key Takeaways
 
 - Threat modeling helps identify risks before exploitation occurs
 - Business impact should drive security prioritization
@@ -202,6 +198,6 @@ Key Takeaways
 
 ---------------------------------------------------------------------
 
-Disclaimer
+## Disclaimer
 
 This threat modeling exercise was conducted in a controlled lab environment for educational and portfolio purposes. No production systems or real-world applications were tested.
