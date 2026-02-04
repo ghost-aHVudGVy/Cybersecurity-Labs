@@ -115,8 +115,8 @@ The application reflects unsanitized user input from the search functionality di
 ### Proof of Concept
 A JavaScript payload was injected into the search parameter:
 
-```html
-<script>alert(1)</script>
+```javascript
+<iframe src="javascript:alert('xss')"></iframe>   
 ```
 The payload executed successfully, confirming a reflected XSS vulnerability.
 
