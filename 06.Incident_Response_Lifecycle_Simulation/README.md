@@ -18,7 +18,7 @@ The incident was treated as a medium-severity endpoint compromise pending furthe
 
 ## Tools and Environment
 
-- Windows 10 / Windows Server (local lab environment)
+- Windows 11vm (local lab environment)
 - Windows Defender Antivirus
 - Event Viewer
 - PowerShell
@@ -47,9 +47,6 @@ The incident was initially detected through endpoint monitoring and observation 
 
 Windows Defender was reviewed to confirm security alerts and identify potential threats.
 
-Screenshot:
-screenshots/01_defender_threat_detection.png
-
 ---
 
 ### Initial Analysis
@@ -60,9 +57,6 @@ Key indicators identified:
 - Encoded PowerShell command execution
 - Execution under a standard user context
 - No immediate signs of lateral movement
-
-Screenshot:
-screenshots/02_event_viewer_suspicious_activity.png
 
 ---
 
@@ -93,9 +87,6 @@ To prevent potential spread or further damage, the affected endpoint was isolate
 
 This mirrors endpoint isolation performed through EDR platforms in production environments.
 
-Screenshot:
-screenshots/03_endpoint_isolation_network_disabled.png
-
 ---
 
 ### Evidence Preservation
@@ -120,9 +111,6 @@ Actions taken:
 - Threat quarantined
 - Startup and scheduled task review performed
 
-Screenshot:
-screenshots/04_defender_threat_removal.png
-
 ---
 
 ### Recovery
@@ -133,9 +121,6 @@ After confirming the threat was removed:
 - Antivirus definitions were updated
 
 The system was monitored to confirm normal behavior and absence of recurring alerts.
-
-Screenshot:
-screenshots/05_system_restored_clean.png
 
 ---
 
@@ -169,16 +154,3 @@ The incident was attributed to suspicious PowerShell execution enabled by insuff
 
 This assessment was conducted strictly in a controlled lab environment using a simulated security incident. No production systems or real-world targets were involved.
 
----
-
-## Repository Structure
-```
-06.Incident_Response_Lifecycle_Simulation/
-├── README.md
-└── screenshots/
-    ├── 01_defender_threat_detection.png
-    ├── 02_event_viewer_suspicious_activity.png
-    ├── 03_endpoint_isolation_network_disabled.png
-    ├── 04_defender_threat_removal.png
-    └── 05_system_restored_clean.png
-```
