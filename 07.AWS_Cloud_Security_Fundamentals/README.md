@@ -18,26 +18,6 @@ All activities were conducted in a controlled personal AWS account for learning 
 - Implement IAM users, roles, policies, and MFA
 - Secure network access using security groups
 - Enable and validate centralized logging with AWS CloudTrail
-- Identify and remediate common AWS security misconfigurations
-- Document findings in a professional security-focused format
-
----
-
-## AWS Shared Responsibility Model
-
-AWS is responsible for:
-- Physical data centers
-- Hardware and infrastructure
-- Underlying cloud platform security
-
-Customer responsibilities include:
-- Identity and Access Management (IAM)
-- Network configurations
-- Logging and monitoring
-- Data protection
-- Application and OS security
-
-This lab focuses entirely on customer-side responsibilities.
 
 ---
 
@@ -55,7 +35,7 @@ This lab focuses entirely on customer-side responsibilities.
 
 ### Evidence
 
-- screenshots/01_root_mfa_enabled.png
+[Root_MFA_Enabled](./screenshots/01_root_mfa_enabled.png)
 
 ---
 
@@ -84,9 +64,9 @@ This follows the principle of least privilege.
 
 ### Evidence
 
-- screenshots/02_iam_user_created.png
-- screenshots/03_iam_user_policy_attached.png
-- screenshots/04_iam_user_mfa_enabled.png
+[IAM_user_created_policy_attached](./screenshots/02_iam_user_created_policy_attached.png)
+
+[IAM_user_MFA_enabled](./screenshots/03_iam_user_mfa_enabled.png)
 
 ---
 
@@ -109,7 +89,7 @@ Created an IAM role to allow EC2 instances to interact securely with AWS service
 
 ### Evidence
 
-- screenshots/05_iam_role_created.png
+[IAM_role_created](./screenshots/04_iam_role_created.png)
 
 ---
 
@@ -139,7 +119,7 @@ Outbound rules:
 
 ### Evidence
 
-- screenshots/06_security_group_rules.png
+[Security_group_rules](./screenshots/05_security_group_rules.png)
 
 ---
 
@@ -165,32 +145,9 @@ Outbound rules:
 
 ### Evidence
 
-- screenshots/07_cloudtrail_enabled.png
-- screenshots/08_cloudtrail_event_history.png
+[Cloudtrail_enabled](./screenshots/06_cloudtrail_enabled.png)
 
----
-
-## Misconfiguration Identification and Remediation
-
-### Identified Issues
-
-- Potential overly permissive security group rules
-- Risk of exposed SSH access
-
-### Remediation
-
-- Restricted SSH access from 0.0.0.0/0 to a specific administrator IP
-- Verified rule changes were applied successfully
-
-### Security Impact
-
-- Prevents brute-force and unauthorized access attempts
-- Demonstrates proactive risk management
-
-### Evidence
-
-- screenshots/09_security_group_before_fix.png
-- screenshots/10_security_group_after_fix.png
+[Cloudtrail_event_history](./screenshots/07_cloudtrail_event_history.png)
 
 ---
 
@@ -201,7 +158,6 @@ Outbound rules:
 - MFA is critical for both root and IAM users
 - Security groups act as the first line of network defense
 - Logging and monitoring are essential for detection and response
-- Identifying and fixing misconfigurations is a core security skill
 
 ---
 
@@ -210,22 +166,4 @@ Outbound rules:
 This project was conducted in a personal AWS Free Tier account strictly for educational purposes.  
 No production systems, customer data, or real-world environments were involved.
 
----
 
-## Repository Structure
-
-```
-07.AWS_Cloud_Security_Fundamentals/
-├── README.md
-└── screenshots/
-    ├── 01_root_mfa_enabled.png
-    ├── 02_iam_user_created.png
-    ├── 03_iam_user_policy_attached.png
-    ├── 04_iam_user_mfa_enabled.png
-    ├── 05_iam_role_created.png
-    ├── 06_security_group_rules.png
-    ├── 07_cloudtrail_enabled.png
-    ├── 08_cloudtrail_event_history.png
-    ├── 09_security_group_before_fix.png
-    └── 10_security_group_after_fix.png
-```
